@@ -25,7 +25,6 @@ A modified version of the Arma 3 EMP script by Aliascartoons on [Armaholic](http
 1) An TFAR jamming script that runs with the same variable as the emp.
 2) A way to stop the jamming, etc after finding intel.
 
-
 ## Known Bugs
 
 - Toolkits are not removed from the players inventories.
