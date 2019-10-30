@@ -35,6 +35,7 @@ missionNamespace setVariable ["EMP_Range", _EMP_Range, true];
 ## Upcoming features
 
 1) A way to automatically stop the jamming/whitelist players, after, for example, finding intel, walking out the range and back in or rearming at an arsenal.
+2) Integration with my map cleaning script for immersion purposes.
 
 ## Known Bugs
 
