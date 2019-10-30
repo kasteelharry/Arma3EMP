@@ -10,20 +10,28 @@ A modified version of the Arma 3 EMP script by Aliascartoons on [Armaholic](http
 ## Usage
 
 - In your mission place down the object that will function as your EMP/jammer and give it a variable name.
-- Run the following line of code:
+- Run the following line of code global:
 
 ```sqf
-[variable,range,true,true] execvm "AL_emp\emp_starter.sqf";
+[EMP,EMP_Range,true,true] execvm "AL_emp\emp_starter.sqf";
 ```
 
-- where variable is the variable name you have given to the object and range is the range of the emp blast.
+- where EMP is the variable name you have given to the object in the editor and range is the EMP_Range of the emp blast.
+  - Changeable in initServer.sqf
+    - Or with:
+
+```sqf
+//Sets the variable from where to run the EMP
+missionNamespace setVariable ["EMP", _EMPvariables, true];
+//Sets the range of it
+missionNamespace setVariable ["EMP_Range", _EMP_Range, true];
+```
 
 - To stop the TFAR Jamming delete the object that was designated as the emp.
 
 ## Upcoming features
 
-1) An TFAR jamming script that runs with the same variable as the emp.
-2) A way to stop the jamming, etc after finding intel.
+1) A way to stop the jamming, etc after finding intel.
 
 ## Known Bugs
 
