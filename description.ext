@@ -1,0 +1,13 @@
+class CfgFunctions
+{
+	class kasteelharry
+	{
+		tag = "kast";
+
+		class functions
+		{
+			file = "functions";
+			class KeepMapClean;
+		};
+	};
+};
