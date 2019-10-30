@@ -27,3 +27,4 @@ waitUntil {!isNil "emp_dam"};
 
 //calls the jamming script, has to be run local to have any effect. Thus run the starting command global.
 jamRadiosServer = [[missionNamespace getVariable "Jammers"],missionNamespace getVariable "JammerRadius", missionNamespace getVariable "JammerStrength"] call kast_fnc_TFARJamRadios;
+missionNamespace setVariable ["DisableMapRestrictor", false, true];
