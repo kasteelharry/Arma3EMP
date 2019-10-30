@@ -18,18 +18,13 @@ Parameter(s):
 3: BOOL (Optional)- Enable Debug. Default is False.
 Example: jamRadios = [[JAMMER],500] execVM "TFARjamRadios.sqf";
 */
-
-if (!hasInterface) exitwith {};
-waituntil {!isnull player};
-
-//Define the variables along with their default values.
-_jammers = param [0, [objNull], [[objNull]]];
-_rad = param [1, 1000, [0]];
-_strength = param [2, 50, [0]] - 1; // Minus one so that radio interference never goes below 1 near the edge of the radius (which is the default for TFAR).
-_debug = param [3, false, [true]];
-
 //compare distances between jammers and player to find nearest jammer and set it as _jammer
-_jammerDist = {
+
+////////////////////////////////////////////////
+//               SUB-FUNCTIONS                //
+////////////////////////////////////////////////
+
+fn_jammerDist = {
 	_jammer = objNull;
 	_closestDist = 1000000;
 	{
@@ -40,7 +35,41 @@ _jammerDist = {
 	} foreach _jammers;
 	_jammer;
 };
-_jammer = call _jammerDist;
+
+fn_debug = {
+	deletemarkerLocal "CIS_DebugMarker";
+	deletemarkerLocal "CIS_DebugMarker2";
+	//Area marker
+	_debugMarker = createmarkerLocal ["CIS_DebugMarker", position _jammer];
+	_debugMarker setMarkerShapeLocal "ELLIPSE";
+	_debugMarker setMarkerSizeLocal [_rad, _rad];
+
+	//Position Marker
+	_debugMarker2 = createmarkerLocal ["CIS_DebugMarker2", position _jammer];
+	_debugMarker2 setMarkerShapeLocal "ICON";
+	_debugMarker2 setMarkerTypeLocal "mil_dot";
+	_debugMarker2 setMarkerTextLocal format ["%1", _jammer];
+
+	systemChat format ["Distance: %1, Percent: %2, Interference: %3, Send Interference: %4", _dist,  100 * _distPercent, _interference, _sendInterference];
+	systemChat format ["Active Jammer: %1, Jammers: %2",_jammer, _jammers];
+
+};
+
+////////////////////////////////////////////////
+//               FUNCTION LOOP                //
+////////////////////////////////////////////////
+
+if (!hasInterface) exitwith {};
+waituntil {!isnull player};
+
+//Define the variables along with their default values.
+_jammers = param [0, [objNull], [[objNull]]];
+_rad = param [1, 1000, [0]];
+_strength = param [2, 50, [0]] - 1; // Minus one so that radio interference never goes below 1 near the edge of the radius (which is the default for TFAR).
+_debug = param [3, false, [true]];
+
+
+_jammer = call fn_jammerDist;
 
 // While the Jamming Vehicle is not destroyed, loop every 5 seconds
 while {alive _jammer} do
@@ -64,22 +93,7 @@ while {alive _jammer} do
 	
     // Debug chat and marker.
 	if (_debug) then {
-		deletemarkerLocal "CIS_DebugMarker";
-		deletemarkerLocal "CIS_DebugMarker2";
-		//Area marker
-		_debugMarker = createmarkerLocal ["CIS_DebugMarker", position _jammer];
-		_debugMarker setMarkerShapeLocal "ELLIPSE";
-		_debugMarker setMarkerSizeLocal [_rad, _rad];
-		
-		//Position Marker
-		_debugMarker2 = createmarkerLocal ["CIS_DebugMarker2", position _jammer];
-		_debugMarker2 setMarkerShapeLocal "ICON";
-		_debugMarker2 setMarkerTypeLocal "mil_dot";
-		_debugMarker2 setMarkerTextLocal format ["%1", _jammer];
-		
-		systemChat format ["Distance: %1, Percent: %2, Interference: %3, Send Interference: %4", _dist,  100 * _distPercent, _interference, _sendInterference];
-		systemChat format ["Active Jammer: %1, Jammers: %2",_jammer, _jammers];
-		
+		[] call fn_debug;
 	};
     // Sleep 5 seconds before running again
     sleep 5.0;
@@ -92,7 +106,7 @@ while {alive _jammer} do
 		} foreach _jammers;
 	
 		//Check for closest jammer
-		_jammer = call _jammerDist;
+		_jammer = call fn_jammerDist;
 	};
 };
 

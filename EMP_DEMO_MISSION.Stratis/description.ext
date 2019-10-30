@@ -1,7 +1,17 @@
-/* 
-		Originial Author: ALIAS
-		Edited by: Kasteelharry
-*/
+class CfgFunctions
+{
+	class kasteelharry
+	{
+		tag = "kast";
+
+		class functions
+		{
+			file = "functions";
+			class KeepMapClean;
+			class TFARJamRadios;
+		};
+	};
+};
 
 class CfgSounds
 {
