@@ -45,7 +45,9 @@ missionNamespace setVariable ["DisableMapRestrictor", true, true];
 
 ## Upcoming features
 
+
 1) A way to automatically stop the jamming/whitelist players, after, for example, finding intel, walking out the range and back in or by simply rearming at an arsenal.
+
 
 ## Known Bugs
 
