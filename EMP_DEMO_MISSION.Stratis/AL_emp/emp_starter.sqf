@@ -26,4 +26,5 @@ waitUntil {!isNil "emp_dam"};
 [] execvm "AL_emp\emp_effect.sqf";
 
 //calls the jamming script, has to be run local to have any effect. Thus run the starting command global.
-jamRadiosServer = [[missionNamespace getVariable "Jammers"],missionNamespace getVariable "JammerRadius", missionNamespace getVariable "JammerStrength"] execVM "TFARjamRadios.sqf";
+jamRadiosServer = [[missionNamespace getVariable "Jammers"],missionNamespace getVariable "JammerRadius", missionNamespace getVariable "JammerStrength"] call kast_fnc_TFARJamRadios;
+missionNamespace setVariable ["DisableMapRestrictor", false, true];
