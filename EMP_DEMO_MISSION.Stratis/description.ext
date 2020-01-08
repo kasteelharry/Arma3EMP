@@ -18,13 +18,13 @@ class CfgSounds
 	class murmur
 	{
 		name = "murmur"; // Name for mission editor
-		sound[] = {\Sound\murmur.ogg, 0.8, 1.0};
+		sound[] = {"\Sound\murmur.ogg", 0.8, 1.0};
 		titles[] = {0, ""};
 	};
 	class geiger
 	{
 		name = "geiger"; // Name for mission editor
-		sound[] = {\Sound\geiger.ogg, .7, 1.0};
+		sound[] = {"\Sound\geiger.ogg", .7, 1.0};
 		titles[] = {0, ""};
 	};
 	class spark1
