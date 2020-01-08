@@ -78,7 +78,7 @@ class CfgSounds
 	class tiuit
 	{
 		name = "tiuit"; // Name for mission editor
-		sound[] = {\Sound\tiuit.ogg, 0.2, 1.0};
+		sound[] = {"\Sound\tiuit.ogg", 0.2, 1.0};
 		titles[] = {0, ""};	
 	};
 };
