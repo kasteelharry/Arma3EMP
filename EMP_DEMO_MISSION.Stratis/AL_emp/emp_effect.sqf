@@ -38,7 +38,7 @@ _delay_check = 0.01;
 //{_x disableTIEquipment true; _x disableNVGEquipment true; [[_x],"AL_emp\sparky.sqf"] remoteExec ["execVM"];sleep _delay_check} forEach static_turrets_emp;
 ["geiger"] remoteExec ["playsound"];
 {
-	//Doesn't run on correct locality, possible fix soon(tm)
+	//Will be changed into an easier to read block of code, making use of an array etc.
 	[[_x],"AL_emp\tgt_sfx.sqf"] remoteExec ["execVM"];
 	_x unassignItem "Toolkit";
 	_x removeItem "ToolKit";
