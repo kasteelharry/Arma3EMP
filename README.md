@@ -11,9 +11,9 @@ The following scripts have been tested in a dedicated enviroment with succesful 
 1. Clone or download the repository and place all the files and folders in your mission folder.
 2. Copy contents of any already existing files over to the correct files.
 3. In the editor give the object that serves as the EMP source the variable name ***EMP***.
-   - If the object already has a variable name, change it in the [initServer.sqf](initServer.sqf) or set the variable "EMP" as shown in usage.
-4. Set the range and strength of the EMP and Jammers in the [initServer.sqf](initServer.sqf) file.
-5. Set the groups that can draw/place markers on map after the EMP blast in the [initServer.sqf](initServer.sqf) file.
+   - If the object already has a variable name, change it in the [initServer.sqf](EMP_DEMO_MISSION.Stratis/initServer.sqf) or set the variable "EMP" as shown in usage.
+4. Set the range and strength of the EMP and Jammers in the [initServer.sqf](EMP_DEMO_MISSION.Stratis/initServer.sqf) file.
+5. Set the groups that can draw/place markers on map after the EMP blast in the [initServer.sqf](EMP_DEMO_MISSION.Stratis/initServer.sqf) file.
 
 ## Usage
 
@@ -45,7 +45,7 @@ missionNamespace setVariable ["DisableMapRestrictor", true, true];
 
 ## Other useful info
 
-If you want to change the types of things/entities that are affected by the blast, you can change them in [config_obj.sqf](config_obj.sqf).
+If you want to change the types of things/entities that are affected by the blast, you can change them in [config_obj.sqf](EMP_DEMO_MISSION.Stratis/AL_emp/config_obj.sqf).
 
 ## Known Bugs
 
