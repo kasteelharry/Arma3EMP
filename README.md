@@ -4,7 +4,7 @@ A modified version of the Arma 3 EMP script by Aliascartoons on [Armaholic](http
 
 ## Disclaimer
 
-The following scripts have been tested in a dedicated enviroment with succesful results. However the author of this repository is not responsible for any damages due to the usage of the script. If any issues are discovered, please open a new issue. 
+The following scripts have been tested in a dedicated enviroment with succesful results. However the author of this repository is not responsible for any damages due to the usage of the script. If any issues are discovered, please open a new issue.
 
 ## Installation guide
 
