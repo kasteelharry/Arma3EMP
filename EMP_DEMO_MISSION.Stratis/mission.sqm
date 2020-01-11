@@ -8,14 +8,14 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=42;
+		nextID=44;
 	};
 	class Camera
 	{
-		pos[]={1776.0831,74.42469,5572.9219};
-		dir[]={0.2428441,-0.31170684,0.91872388};
-		up[]={0.079690084,0.95013887,0.301465};
-		aside[]={0.96687669,-1.2427336e-006,-0.25557134};
+		pos[]={1760.1508,116.36168,5539.8672};
+		dir[]={0.15487693,-0.8028546,0.57589298};
+		up[]={0.20851642,0.59614426,0.77532995};
+		aside[]={0.96577871,-1.8060455e-006,-0.25972876};
 	};
 };
 binarizationWanted=0;
@@ -29,13 +29,14 @@ addons[]=
 	"A3_Soft_F_Exp_MRAP_01",
 	"A3_Air_F_Heli_Light_01",
 	"ace_realisticnames",
-	"A3_Armor_F_EPC_MBT_01"
+	"A3_Armor_F_EPC_MBT_01",
+	"A3_Modules_F_Curator_Curator"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=9;
 		class Item0
 		{
 			className="A3_Structures_F_EPC";
@@ -92,6 +93,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item8
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=14979016;
@@ -123,7 +131,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=11;
+		items=12;
 		class Item0
 		{
 			dataType="Object";
@@ -290,7 +298,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1798.1899,7.1262865,5631.0908};
-				angles[]={-0,1.668128,0};
+				angles[]={0,1.668128,0};
 			};
 			side="Empty";
 			flags=4;
@@ -463,7 +471,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1834.6144,5.5014391,5631.6035};
-						angles[]={-0,5.844758,0};
+						angles[]={0,5.844758,0};
 					};
 					side="West";
 					flags=4;
@@ -479,7 +487,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1834.6144,5.5014391,5631.6035};
-						angles[]={-0,5.844758,0};
+						angles[]={0,5.844758,0};
 					};
 					side="West";
 					flags=6;
@@ -533,7 +541,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1834.6144,8.2582445,5631.5518};
-				angles[]={-0,5.844758,0};
+				angles[]={0,5.844758,0};
 			};
 			side="West";
 			flags=6;
@@ -649,7 +657,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1823.835,5.5014391,5712.8315};
-						angles[]={-0,3.3876739,0};
+						angles[]={0,3.3876739,0};
 					};
 					side="West";
 					flags=4;
@@ -665,7 +673,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1823.835,5.5014391,5712.8315};
-						angles[]={-0,3.3876739,0};
+						angles[]={0,3.3876739,0};
 					};
 					side="West";
 					flags=4;
@@ -681,7 +689,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={1823.835,5.5014391,5712.8315};
-						angles[]={-0,3.3876739,0};
+						angles[]={0,3.3876739,0};
 					};
 					side="West";
 					flags=6;
@@ -746,7 +754,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={1823.835,8.2264757,5712.7817};
-				angles[]={-0,3.3876739,0};
+				angles[]={0,3.3876739,0};
 			};
 			side="West";
 			flags=6;
@@ -755,6 +763,96 @@ class Mission
 			};
 			id=38;
 			type="B_MBT_01_TUSK_F";
+		};
+		class Item11
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={1778.9821,5.5,5557.2441};
+			};
+			id=42;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#adminLogged";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
 		};
 	};
 };
