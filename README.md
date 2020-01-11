@@ -1,6 +1,12 @@
-# Arma 3 Elektromagnetic Pulse (EMP) multiplayer port
+# Arma 3 Electromagnetic Pulse (EMP) multiplayer port
 
 A modified version of the Arma 3 EMP script by Aliascartoons on [Armaholic](http://www.armaholic.com/page.php?id=34293). Edited by Kasteelharry for useage in multiplayer and to be used in combination with the TFAR jamming script by Rebel12340 on [Armaholic](http://www.armaholic.com/page.php?id=32660). This script has been developed for the missions held by the Arma 3 Unit [Zeus Operations](Zeusops.com) each weekend on their servers.
+
+## Features
+
+1. An Electromagnetic Pulse that disables/removes all electronic devices and disables all vehicles.
+2. No radios due to a TFAR radio jammer after running it.
+3. Players can't place markers on the map after EMP detonation.
 
 ## Disclaimer
 
