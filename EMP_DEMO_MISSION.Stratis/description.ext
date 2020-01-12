@@ -26,6 +26,8 @@ class CfgFunctions
 			file = "functions";
 			class KeepMapClean;
 			class TFARJamRadios;
+			class RemoveNVGs;
+			class getAllNVGs;
 		};
 	};
 };
