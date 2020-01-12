@@ -11,6 +11,9 @@ _viz_eff	= _this select 2;
 _player_viz = _this select 3;
 _dam_unit	= _this select 4;
 
+//Makes a list of all the NVG's that could be used in the mission.
+[] spawn kast_fnc_getAllNVGs;
+
 //if (!isNil {_obj_emp getVariable "is_ON"}) exitwith {};
 _obj_emp setVariable ["is_ON",true,true];
 missionNamespace setVariable ["empDetonated", true, true];

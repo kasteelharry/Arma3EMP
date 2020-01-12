@@ -1,3 +1,20 @@
+
+
+onLoadMissionTime = 0;
+respawn = 3;
+respawnButton = 0;
+respawnDelay = 900;
+respawnDialog = 0;
+respawnOnStart = -1;
+respawnTemplates[] = {"Spectator"};
+disabledAI = 1;
+briefing = 0;
+debriefing = 0;
+disableChannels[] = {{0,false,true},{1,false,true},{2,true,true},{3,false,true},{4,true,true},{5,true,true},{6,false,true}};
+saving = 1;
+enableDebugConsole = 1;
+
+
 class CfgFunctions
 {
 	class kasteelharry
@@ -9,6 +26,8 @@ class CfgFunctions
 			file = "functions";
 			class KeepMapClean;
 			class TFARJamRadios;
+			class RemoveNVGs;
+			class getAllNVGs;
 		};
 	};
 };
@@ -18,13 +37,13 @@ class CfgSounds
 	class murmur
 	{
 		name = "murmur"; // Name for mission editor
-		sound[] = {\Sound\murmur.ogg, 0.8, 1.0};
+		sound[] = {"\Sound\murmur.ogg", 0.8, 1.0};
 		titles[] = {0, ""};
 	};
 	class geiger
 	{
 		name = "geiger"; // Name for mission editor
-		sound[] = {\Sound\geiger.ogg, .7, 1.0};
+		sound[] = {"\Sound\geiger.ogg", .7, 1.0};
 		titles[] = {0, ""};
 	};
 	class spark1
@@ -78,7 +97,7 @@ class CfgSounds
 	class tiuit
 	{
 		name = "tiuit"; // Name for mission editor
-		sound[] = {\Sound\tiuit.ogg, 0.2, 1.0};
+		sound[] = {"\Sound\tiuit.ogg", 0.2, 1.0};
 		titles[] = {0, ""};	
 	};
 };

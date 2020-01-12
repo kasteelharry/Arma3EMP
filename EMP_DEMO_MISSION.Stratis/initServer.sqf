@@ -3,15 +3,18 @@
 	By @kasteelharry
 */
 
+
 ///////////////////////////////////
-///								///
-///		EDITABLE VARIABLE 		///
-///								///
+///                             ///
+///    EDITABLE VARIABLE        ///
+///                             ///
 ///////////////////////////////////
 
 // EMP
-_EMPvariables = _jammervariables = EMP; //Needs to contain the variable name of the object spawned in game
-_EMP_Range = _jammerRadius = 1000; //Range of the EMP blast and jamming afterwards
+_EMPvariable = EMP; //Sets the variable names of the EMP's here
+_jammerNames = _EMPvariable; //Makes the EMP the same source as the TFAR jammer
+_EMP_Range = 1000; //Range of the EMP blast and jamming afterwards
+_jammerRadius = _EMP_Range; //Sets jammer radius the same as EMP radius
 _jammerStrength = 100; //Strength of the jammer, max is 100
 
 // REMOVE USERPLACED MARKERS 
@@ -19,13 +22,13 @@ _jammerStrength = 100; //Strength of the jammer, max is 100
 _AllowedToDrawGroup = ["GroupName1", "GroupName2", "etc..."];
 
 ///////////////////////////////////
-///								///
-///			DO NOT EDIT 		///
-///								///
+///                             ///
+///         DO NOT EDIT         ///
+///                             ///
 ///////////////////////////////////
 
 // EMP + Jammer
-missionNamespace setVariable ["EMP", _EMPvariables, true];
+missionNamespace setVariable ["EMP", _EMPvariable, true];
 missionNamespace setVariable ["EMP_Range", _EMP_Range, true];
 missionNamespace setVariable ["Jammers", _jammerNames, true];
 missionNamespace setVariable ["JammerRadius", _jammerRadius, true];
