@@ -1,5 +1,5 @@
 /* 
-	Filename @DrawMapRestrictor.sqf
+	Filename @fn_KeepMapClean.sqf
 	Author @kasteelharry
 	Licensed under GNU Affero General Public License v3.0
 
@@ -8,7 +8,7 @@
 
 	This script checks all the map markers and delete every userplaced marker that isn't placed by a player in a group that is defined in the initServer.sqf
 	For this to run you need to have Direct Play ID's stored in a global variable with the players name.
-	Can be created by @MapRestrictorIDGet.sqf 
+	This list is generated on startup by initServer.sqf
 */
 
 
