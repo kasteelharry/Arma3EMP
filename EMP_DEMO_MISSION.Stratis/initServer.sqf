@@ -3,10 +3,11 @@
 	By @kasteelharry
 */
 
+
 ///////////////////////////////////
-///								///
-///		EDITABLE VARIABLE 		///
-///								///
+///                             ///
+///    EDITABLE VARIABLE        ///
+///                             ///
 ///////////////////////////////////
 
 // EMP
@@ -21,9 +22,9 @@ _jammerStrength = 100; //Strength of the jammer, max is 100
 _AllowedToDrawGroup = ["GroupName1", "GroupName2", "etc..."];
 
 ///////////////////////////////////
-///								///
-///			DO NOT EDIT 		///
-///								///
+///                             ///
+///         DO NOT EDIT         ///
+///                             ///
 ///////////////////////////////////
 
 // EMP + Jammer
